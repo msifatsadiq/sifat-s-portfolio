@@ -121,7 +121,7 @@ export const AboutSection = () => {
             </Card>
           </div>
           <div className="grid gap-8 grid-cols-1 md:grid-cols-5 lg:grid-cols-3">
-            <Card className="h-[320px] lg:col-span-2 col-span-3 p-0 flex flex-col">
+            <Card className="h-[320px] lg:col-span-2 md:col-span-3 p-0 flex flex-col">
               <CardHeader
                 title="Beyond the code"
                 description="Explore my interests and hobbies beyond the digital realm."
@@ -145,7 +145,7 @@ export const AboutSection = () => {
                 ))}
               </div>
             </Card>
-            <Card className="h-[320px] lg:col-span-1col-span-2 p-0 relative">
+            <Card className="h-[320px] lg:col-span-1 md:col-span-2 p-0 relative">
               <Image
                 src={mapImage}
                 alt="map"
