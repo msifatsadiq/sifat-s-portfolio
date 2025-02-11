@@ -3,6 +3,9 @@ import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
 import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
 import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
+import { Card } from "@/components/Card";
+import { SectionHeaderT } from "@/components/SectionHeaderT";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -38,5 +41,44 @@ const testimonials = [
 ];
 
 export const TestimonialsSection = () => {
-  return <div>Testimonials Section</div>;
+  return (
+    <div className="py-16 px-4">
+      <div>
+        <SectionHeaderT
+          eyebrow="Happy Client"
+          title="What Clients Say About Me"
+          description=" Do not just take my word for it.See what my clients have to say about my
+          work."
+        ></SectionHeaderT>
+        <div className="mt-16 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+          <div className="flex flex-none gap-8 ">
+            {testimonials.map((testimonial) => (
+              <Card
+                key={testimonial.name}
+                className="border border-gray-300/20  max-w-xs"
+              >
+                <div className="flex gap-4 items-center">
+                  <div className="size-14 bg-gray-700 inline-flex rounded-full items-center justify-center flex-shrink-0">
+                    <Image
+                      className="max-h-full"
+                      src={testimonial.avatar}
+                      alt={testimonial.name}
+                    ></Image>
+                  </div>
+                  <div>
+                    <div className="font-semibold">{testimonial.name}</div>
+                    <div className="text-sm text-white/40">
+                      {testimonial.position}
+                    </div>
+                  </div>
+                </div>
+
+                <p className="mt-4 text-sm">{testimonial.text}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };

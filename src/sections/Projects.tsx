@@ -4,6 +4,7 @@ import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
 import GrainImage from "@/assets/images/grain.jpg";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
+import { SectionHeaderT } from "@/components/SectionHeaderT";
 import Image from "next/image";
 
 const portfolioProjects = [
@@ -49,20 +50,11 @@ export const ProjectsSection = () => {
   return (
     <section className="pb-16 lg:py-24">
       <div className="container">
-        <div className="flex justify-center">
-          <p
-            className="uppercase font-semibold tracking-widest bg-gradient-to-r
-           from-emerald-300 to-sky-400 text-center bg-clip-text text-transparent"
-          >
-            Real-World Results
-          </p>
-        </div>
-        <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">
-          Featured Projects
-        </h2>
-        <p className="text-center md:text-lg lg:text-xl  text-white/60 mt-4 max-w-md mx-auto">
-          See how transformed concepts into engaging digital experiences
-        </p>
+        <SectionHeaderT
+          eyebrow="Real-World Results"
+          title=" Featured Projects"
+          description=" See how transformed concepts into engaging digital experiences"
+        ></SectionHeaderT>
       </div>
       <div className="flex flex-col md:mt-20 mt-10 gap-20 px-4 ">
         {portfolioProjects.map((project) => (
