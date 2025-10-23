@@ -88,7 +88,7 @@ const hobbies = [
 
 export const AboutSection = () => {
   return (
-    <div className="py-20 lg:py-28">
+    <div id="about" className="py-20 lg:py-28">
       <div className="container">
         <SectionHeaderT
           eyebrow="About Me"
